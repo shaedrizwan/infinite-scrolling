@@ -26,10 +26,11 @@ function TodosList() {
       <h2>Shopping List:</h2>
       <ul className="todos-list">
         {todos?.map((todo, index) => {
-          const isLastElement = todos.length === index + 1;
+          const listProps =
+            todos.length === index + 1 ? { ref: lastElementRef } : {};
           return (
-            <li ref={isLastElement ? lastElementRef : undefined}>
-              <Todo key={todo.id} item={todo} isLastElement={false} />
+            <li {...listProps}>
+              <Todo key={todo.id} item={todo} />
             </li>
           );
         })}
