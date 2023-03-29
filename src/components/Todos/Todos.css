@@ -19,6 +19,9 @@
   margin: 15px;
   list-style-type: none;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .todo-item:hover {
