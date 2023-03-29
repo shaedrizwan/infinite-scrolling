@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { api } from "../../config/axios";
 import { TodoType } from "./Todos.types";
 
-function useTodos() {
+function useTodos(page = 1) {
   const [isLoading, setIsLoading] = useState(false);
   const [todos, setTodos] = useState<TodoType[]>([]);
   const [error, setError] = useState<string>();
@@ -12,7 +12,7 @@ function useTodos() {
     (async function () {
       setIsLoading(true);
       try {
-        const todosResponse = await api.get("todos?_limit=10&_page=1");
+        const todosResponse = await api.get(`/todos?_limit=10&_page=${page}`);
         if (todosResponse.status === 200) {
           setTodos(todosResponse.data);
         }
