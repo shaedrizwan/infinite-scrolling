@@ -1,10 +1,9 @@
 import "./Todos.css";
 import { TodoPropsType } from "./Todos.types";
 
-function Todo({ item, isLastElement }: TodoPropsType) {
+function Todo({ item }: TodoPropsType) {
   return (
     <div className="todo-item">
-      {isLastElement && "laast"}
       {item.id}. {item.title}
     </div>
   );
