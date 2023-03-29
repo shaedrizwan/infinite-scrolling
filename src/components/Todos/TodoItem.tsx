@@ -1,7 +1,7 @@
 import "./Todos.css";
-import { TodoType } from "./Todos.types";
+import { TodoPropsType } from "./Todos.types";
 
-function Todo({ item }: { item: TodoType }) {
+function Todo({ item }: TodoPropsType) {
   return (
     <div className="todo-item">
       {item.id}. {item.title}
