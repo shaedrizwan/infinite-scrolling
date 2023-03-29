@@ -5,7 +5,9 @@ import { TodoPropsType } from "./Todos.types";
 function Todo({ item }: TodoPropsType) {
   return (
     <div className="todo-item">
-      {item.completed ? <Checked /> : <Unchecked />}
+      <div className="todo-icon-container">
+        {item.completed ? <Checked /> : <Unchecked />}
+      </div>
       <span>
         {item.id}. {item.title}
       </span>

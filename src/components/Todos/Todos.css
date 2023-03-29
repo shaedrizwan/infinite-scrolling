@@ -1,9 +1,14 @@
 .todos-container {
   height: 70vh;
-  width: 500px;
+  width: 400px;
   border-radius: 24px;
   background-color: #ffffff;
   padding: 20px;
+}
+
+.todo-heading {
+  text-align: center;
+  font-weight: 700;
 }
 
 .todos-list {
@@ -16,7 +21,7 @@
   background-color: #f6f6f6;
   border-radius: 14px;
   padding: 15px 25px;
-  margin: 15px;
+  margin: 15px 0px;
   list-style-type: none;
   transition: all 0.2s ease;
   display: flex;
@@ -27,4 +32,8 @@
 .todo-item:hover {
   background-color: #ebebeb;
   transform: scale(1.01);
+}
+
+.todo-icon-container {
+  width: 15%;
 }

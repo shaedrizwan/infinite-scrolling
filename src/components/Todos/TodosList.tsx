@@ -23,7 +23,7 @@ function TodosList() {
 
   return (
     <div className="todos-container">
-      <h2>Shopping List:</h2>
+      <h2 className="todo-heading">Shopping List</h2>
       <ul className="todos-list">
         {todos?.map((todo, index) => {
           const isLastElement = todos.length === index + 1;
