@@ -1,6 +1,9 @@
 import { useCallback, useRef, useState } from "react";
+import { useIntersectionObserverPropsType } from "../utils/types";
 
-function useIntersectionObserver({ loading }: { loading: boolean }) {
+function useIntersectionObserver({
+  isLoading,
+}: useIntersectionObserverPropsType) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const observer = useRef<IntersectionObserver>();
 
@@ -14,7 +17,7 @@ function useIntersectionObserver({ loading }: { loading: boolean }) {
   };
 
   const lastElementRef = useCallback((node: HTMLLIElement) => {
-    if (!loading) {
+    if (!isLoading) {
       if (observer.current) {
         observer.current.disconnect();
       }

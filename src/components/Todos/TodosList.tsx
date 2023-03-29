@@ -8,7 +8,7 @@ function TodosList() {
   const [page, setPage] = useState(1);
   const { isLoading, todos, error } = useTodos(page);
   const { isIntersecting, lastElementRef } = useIntersectionObserver({
-    loading: isLoading,
+    isLoading,
   });
 
   const showNextPageItems = () => {
