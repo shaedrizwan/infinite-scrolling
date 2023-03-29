@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver.hook";
 import Todo from "./TodoItem";
 import "./Todos.css";
