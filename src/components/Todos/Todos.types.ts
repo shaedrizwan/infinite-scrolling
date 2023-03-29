@@ -7,4 +7,5 @@ export type TodoType = {
 
 export type TodoPropsType = {
   item: TodoType;
+  isLastElement: boolean;
 };

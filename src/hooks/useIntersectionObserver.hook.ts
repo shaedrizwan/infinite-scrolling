@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
-function useIntersectionObserver({ parentRef, targetRef }: any) {
+function useIntersectionObserver({ loading }: { loading: boolean }) {
   const [isIntersecting, setIsIntersecting] = useState(false);
-
-  const options = {
-    root: parentRef.current,
-    rootMargin: "0px",
-    threshold: 1,
-  };
+  const observer = useRef<IntersectionObserver>();
 
   const callbackFn = (entries: IntersectionObserverEntry[]) => {
     const [entry] = entries;
@@ -18,21 +13,19 @@ function useIntersectionObserver({ parentRef, targetRef }: any) {
     }
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(callbackFn, options);
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
-
-    return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-        targetRef = null;
+  const lastElementRef = useCallback((node: HTMLLIElement) => {
+    if (!loading) {
+      if (observer.current) {
+        observer.current.disconnect();
       }
-    };
-  }, [targetRef, options]);
+      observer.current = new IntersectionObserver(callbackFn);
+      if (node) {
+        observer.current.observe(node);
+      }
+    }
+  }, []);
 
-  return { isIntersecting };
+  return { isIntersecting, lastElementRef };
 }
 
 export default useIntersectionObserver;
