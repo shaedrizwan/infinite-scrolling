@@ -43,3 +43,33 @@
   font-weight: 700;
   text-align: right;
 }
+
+@media screen and (max-width: 768px) {
+  .albums-grid {
+    width: 80%;
+    height: 70%;
+    border-radius: 24px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .albums-container {
+    height: 80%;
+    width: 80%;
+    border-radius: 24px;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+
+  .album-card {
+    height: 180px;
+    width: 180px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #fbedff;
+  }
+}
