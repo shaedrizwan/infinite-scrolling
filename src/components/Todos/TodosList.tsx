@@ -29,8 +29,8 @@ function TodosList() {
           const isLastElement = todos.length === index + 1;
           const listProps = isLastElement ? { ref: lastElementRef } : {};
           return (
-            <li {...listProps}>
-              <Todo key={todo.id} item={todo} />
+            <li key={todo.id} {...listProps}>
+              <Todo item={todo} />
             </li>
           );
         })}
