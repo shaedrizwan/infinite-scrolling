@@ -37,3 +37,17 @@
 .todo-icon-container {
   width: 15%;
 }
+
+@media screen and (max-width: 768px) {
+  .todos-container {
+    height: 70vh;
+    width: 80%;
+    border-radius: 24px;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+
+  .todos-list {
+    height: 80%;
+  }
+}
