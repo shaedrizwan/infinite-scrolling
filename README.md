@@ -1,6 +1,12 @@
 # Infinite Scrolling - using ReactJs and Typescript
 
-Implimenting infinite scrolling using one of the document API called Intersection Observer. The whole codebase is on ReactJs and Typescript.
+
+
+https://user-images.githubusercontent.com/50213576/228797351-cdd91c03-5888-476b-9d9f-0f1093d714d6.mp4
+
+
+
+Implimented infinite scrolling using one of the document API called Intersection Observer. The whole codebase is on ReactJs and Typescript.
 
 We are using free APIs from [jsonplacehold](https://jsonplaceholder.typicode.com)
 
