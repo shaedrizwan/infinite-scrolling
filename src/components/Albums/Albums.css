@@ -5,3 +5,41 @@
   background-color: #ffffff;
   padding: 20px;
 }
+
+.todo-heading {
+  text-align: center;
+  font-weight: 700;
+}
+
+.albums-container {
+  height: 80%;
+  overflow: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.album-card {
+  height: 180px;
+  width: 180px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #fbedff;
+}
+
+.album-id {
+  align-self: flex-start;
+}
+
+.album-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+}
