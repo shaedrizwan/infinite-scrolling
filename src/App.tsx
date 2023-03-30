@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import AlbumsGrid from "./components/Albums/AlbumsGrid";
 import TodosList from "./components/Todos/TodosList";
 
